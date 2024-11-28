@@ -1,0 +1,17 @@
+{% extends "first_task/menu.html" %}
+{% load format %}
+{% block title %}
+    Игры
+{% endblock %}
+{% block pagename %}
+    Игры
+{% endblock %}
+{% block content %}
+    <ul>
+    {% for g in games %}
+        <li>
+            {{ g.title }} | {{ g.description }}. Стоимость: {{ g.cost|format:"{:0.2f}" }} <button>Купить</button>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}
+                Главная страница
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+    <h1>
+    {% block pagename %}
+        Главная страница
+    {% endblock %}
+    </h1>
+    {% block menu %}
+    <ul>
+        <li>
+            <a href="/platform/">Главная страница</a>
+        </li>
+        <li>
+            <a href="/platform/games">Магазина</a>
+        </li>
+        <li>
+            <a href="/platform/cart">Корзина</a>
+        </li>
+    </ul>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    </body>
+</html>
